@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'; base-uri 'self';">
+  <title>Browser smoke test</title>
+</head>
+<body>
+  <main>
+    <h1>Browser smoke test</h1>
+    <p id="status">Verificando navegador…</p>
+    <dl>
+      <dt>IndexedDB</dt><dd id="indexeddb-status">pendiente</dd>
+      <dt>Service Worker</dt><dd id="sw-status">pendiente</dd>
+      <dt>Online</dt><dd id="online-status">pendiente</dd>
+    </dl>
+  </main>
+  <script src="js/browser-smoke.js"></script>
+</body>
+</html>

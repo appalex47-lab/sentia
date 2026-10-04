@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="Sentia Intelligence from Conversations es una plataforma local-first para detectar, medir y explicar señales en conversaciones.">
+  <title>Sentia Intelligence from Conversations</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <h1>Sentia</h1>
+      <nav>
+        <button data-view="dashboard" class="nav-item active">Dashboard</button>
+        <button data-view="mentions" class="nav-item">Menciones</button>
+        <button data-view="insights" class="nav-item">Insights</button>
+        <button data-view="configuration" class="nav-item">IA / Configuración</button>
+        <button data-view="help" class="nav-item">Ayuda</button>
+      </nav>
+      <div class="sidebar-note">Local-first · IndexedDB</div>
+    </aside>
+
+    <main id="main" class="main" tabindex="-1">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Sentia · Intelligence from Conversations</span>
+          <h2 id="page-title">Dashboard</h2>
+        </div>
+        <div class="filters" aria-label="Filtros globales">
+          <label>Desde <input id="date-from" type="date"></label>
+          <label>Hasta <input id="date-to" type="date"></label>
+          <label>Buscar <input id="global-search" type="search" placeholder="Texto, categoría..."></label>
+        <button id="reload-data" type="button">Recargar</button>
+          <button id="clear-data" type="button">Borrar datos locales</button>
+        </div>
+      </header>
+
+      <section id="view-dashboard" class="view">
+        <div id="empty-state" class="empty-state hidden"></div>
+        <div class="kpi-grid">
+          <article class="kpi"><span>Total</span><strong id="kpi-total">0</strong></article>
+          <article class="kpi"><span>Positivas</span><strong id="kpi-positive">0</strong></article>
+          <article class="kpi"><span>Negativas</span><strong id="kpi-negative">0</strong></article>
+          <article class="kpi"><span>Críticas</span><strong id="kpi-critical">0</strong></article>
+          <article class="kpi"><span>Score promedio</span><strong id="kpi-score">0</strong></article>
+          <article class="kpi"><span>Calidad promedio</span><strong id="kpi-quality">0</strong></article>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="eyebrow">Determinístico</span>
+              <h3>Evolución del sentimiento</h3>
+            </div>
+            <span class="badge">MODELO + DATOS</span>
+          </div>
+          <div class="chart-wrap"><div id="sentiment-chart" class="native-chart" role="img" aria-label="Evolución temporal del sentimiento"></div><p id="chart-fallback" class="muted hidden">El gráfico no está disponible; los datos siguen disponibles en la tabla de menciones.</p></div>
+        </div>
+
+        <div class="two-col">
+          <article class="card">
+            <div class="card-header"><h3>Insight del día</h3><span class="badge ai">GENERADO POR IA</span></div>
+            <div id="insight-content" class="insight">Sin insight disponible.</div>
+          </article>
+          <article class="card">
+            <div class="card-header"><h3>Menciones críticas</h3><span class="badge">REGLAS / SCORE</span></div>
+            <div id="critical-feed"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="view-mentions" class="view hidden">
+        <div class="card">
+          <div class="card-header"><h3>Menciones</h3><span id="mentions-count" class="muted">0</span></div>
+          <div class="table-actions"><span id="page-status" class="muted">0 de 0</span><button id="prev-page" type="button">Anterior</button><button id="next-page" type="button">Siguiente</button></div><div class="table-wrap">
+            <table>
+              <thead><tr><th>Fecha</th><th>Texto</th><th>Sentimiento</th><th>Categoría</th><th>Score</th><th>Severidad</th><th>Calidad</th></tr></thead>
+              <tbody id="mentions-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-insights" class="view hidden">
+        <div class="card">
+          <div class="card-header"><h3>Insights</h3><span class="badge ai">IA EXPLICATIVA</span></div>
+          <div id="insights-list"></div>
+        </div>
+      </section>
+
+      <section id="view-configuration" class="view hidden">
+        <div class="card">
+          <div class="card-header"><h3>Configuración</h3><span class="badge">LOCAL</span></div>
+          <p>Los parámetros no sensibles pueden persistirse en IndexedDB.</p>
+          <label>Modelo Cohere
+            <input id="cohere-model" value="" placeholder="modelo-configurado">
+          </label>
+          <p class="warning">La API key nunca debe introducirse ni guardarse en esta interfaz. En esta arquitectura Cohere se ejecuta desde Python.</p>
+          <label>Importar JSON <input id="json-file" type="file" accept="application/json"></label>
+          <p id="import-status" class="muted" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="view-help" class="view hidden">
+        <div class="card">
+          <h3>Cómo interpretar la plataforma</h3>
+          <dl>
+            <dt>Sentimiento</dt><dd>Polaridad producida por el modelo de sentimiento.</dd>
+            <dt>Confianza</dt><dd>Confianza del modelo; no equivale al score de negocio.</dd>
+            <dt>Score</dt><dd>Resultado matemático determinístico de las reglas configuradas.</dd>
+            <dt>Severidad</dt><dd>Nivel derivado del score; no es sinónimo de sentimiento.</dd>
+            <dt>Calidad</dt><dd>Evaluación de la integridad y utilidad del dato de entrada.</dd>
+            <dt>IA</dt><dd>Cohere aporta interpretación generativa; no define los KPIs.</dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

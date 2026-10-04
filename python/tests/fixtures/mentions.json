@@ -1,0 +1,5 @@
+[
+  {"id_mencion":"1","fecha":"2026-10-01T10:00:00Z","fuente":"demo","texto_original":"Excelente servicio, gracias"},
+  {"id_mencion":"2","fecha":"2026-10-01T11:00:00Z","fuente":"demo","texto_original":"Mi paquete tiene retraso y no llega"},
+  {"id_mencion":"3","fecha":"2026-10-02T09:00:00Z","fuente":"demo","texto_original":"Necesito información"}
+]

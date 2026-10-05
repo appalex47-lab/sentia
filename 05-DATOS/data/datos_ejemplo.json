@@ -1,0 +1,1914 @@
+{
+  "metadata": {
+    "schema_version": "1.2.0",
+    "processing_version": "demo-1.0.0",
+    "rules_version": "1.0.0",
+    "run_id": "DEMO-20261004",
+    "generated_at": "2026-10-04T12:00:00Z"
+  },
+  "mentions": [
+    {
+      "id_mencion": "demo-mention-001",
+      "hash_mencion": "fefa0fcd3c6080ada9fdf09bf91404766a926e98fd27e5e4855c0dc64ae10451",
+      "fuente": "demo",
+      "fecha": "2026-09-20T17:00:00Z",
+      "texto_original": "Mi pedido lleva tres días de retraso y todavía no llega",
+      "texto_limpio": "Mi pedido lleva tres días de retraso y todavía no llega",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "logistica",
+      "subcategoria": "",
+      "regla_activada": "logistica",
+      "reglas_activadas": [
+        "logistica"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 78
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 78,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-002",
+      "hash_mencion": "99964ec59f273b5b92a1ce97060dec902dfa74ba82624886257853bcded892bc",
+      "fuente": "demo",
+      "fecha": "2026-09-21T00:00:00Z",
+      "texto_original": "La atención por chat fue excelente, me ayudaron rápido",
+      "texto_limpio": "La atención por chat fue excelente, me ayudaron rápido",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 12
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 12,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-003",
+      "hash_mencion": "fc34f4743586006bfa9365fee6033b6b99fb51b3730182fb9c3bd255c62da6e2",
+      "fuente": "demo",
+      "fecha": "2026-09-21T07:00:00Z",
+      "texto_original": "Me cobraron dos veces el mismo pedido",
+      "texto_limpio": "Me cobraron dos veces el mismo pedido",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "facturacion",
+      "subcategoria": "",
+      "regla_activada": "facturacion",
+      "reglas_activadas": [
+        "facturacion"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 82
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 82,
+      "severidad": "critica",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-004",
+      "hash_mencion": "a092a5bc340d05f2be35e47e90e38eeabd7acb5a8d008d4336426127583622ab",
+      "fuente": "demo",
+      "fecha": "2026-09-21T14:00:00Z",
+      "texto_original": "¿Me pueden confirmar cuándo llegará mi paquete?",
+      "texto_limpio": "¿Me pueden confirmar cuándo llegará mi paquete?",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "entrega",
+      "subcategoria": "",
+      "regla_activada": "entrega",
+      "reglas_activadas": [
+        "entrega"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 42
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 42,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-005",
+      "hash_mencion": "0f6e417683422e4401ed58d1a9b674088438ee426ab8a4d6c2e8316685af048d",
+      "fuente": "demo",
+      "fecha": "2026-09-21T21:00:00Z",
+      "texto_original": "Gracias por resolver mi problema tan rápido",
+      "texto_limpio": "Gracias por resolver mi problema tan rápido",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "soporte",
+      "subcategoria": "",
+      "regla_activada": "soporte",
+      "reglas_activadas": [
+        "soporte"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 10
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 10,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-006",
+      "hash_mencion": "8b3f19396b53c1f1caef4c1f673da79654f43d5dce604ab751000e594805c74e",
+      "fuente": "demo",
+      "fecha": "2026-09-22T04:00:00Z",
+      "texto_original": "El paquete aparece entregado pero yo no lo recibí",
+      "texto_limpio": "El paquete aparece entregado pero yo no lo recibí",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "logistica",
+      "subcategoria": "",
+      "regla_activada": "logistica",
+      "reglas_activadas": [
+        "logistica"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 88
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 88,
+      "severidad": "critica",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-007",
+      "hash_mencion": "de37662505adce1e7fdf0bbb5574725e160e003d02545e7cff4d915e859ff92f",
+      "fuente": "demo",
+      "fecha": "2026-09-22T11:00:00Z",
+      "texto_original": "Quiero saber si todavía tienen disponibilidad",
+      "texto_limpio": "Quiero saber si todavía tienen disponibilidad",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "producto",
+      "subcategoria": "",
+      "regla_activada": "producto",
+      "reglas_activadas": [
+        "producto"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 35
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 35,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-008",
+      "hash_mencion": "32763af5a0dddc3a0c3bc68eb4013c063688e0f8e6935e6626160cd2a37e5e17",
+      "fuente": "demo",
+      "fecha": "2026-09-22T18:00:00Z",
+      "texto_original": "Llevo mucho tiempo esperando una respuesta",
+      "texto_limpio": "Llevo mucho tiempo esperando una respuesta",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 67
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 67,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-009",
+      "hash_mencion": "fbb277ab9d1be73b2e3586a1b39e29bc1598da84a6eecc81acf7d0ac97a38d60",
+      "fuente": "demo",
+      "fecha": "2026-09-23T01:00:00Z",
+      "texto_original": "Ya recibí el pedido, llegó en buenas condiciones",
+      "texto_limpio": "Ya recibí el pedido, llegó en buenas condiciones",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "entrega",
+      "subcategoria": "",
+      "regla_activada": "entrega",
+      "reglas_activadas": [
+        "entrega"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 8
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 8,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-010",
+      "hash_mencion": "1d4ab1fa1981dfb9ea66ffa905ff352f1f0ec76bb3d9c8fc0086cef8db74ca48",
+      "fuente": "demo",
+      "fecha": "2026-09-23T08:00:00Z",
+      "texto_original": "Necesito devolver el producto porque llegó dañado",
+      "texto_limpio": "Necesito devolver el producto porque llegó dañado",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "devolucion",
+      "subcategoria": "",
+      "regla_activada": "devolucion",
+      "reglas_activadas": [
+        "devolucion"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 74
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 74,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-011",
+      "hash_mencion": "603f220c7fd58571cda2627210b9085942d01939061082e6a197d0cdc8cda3fb",
+      "fuente": "demo",
+      "fecha": "2026-09-23T15:00:00Z",
+      "texto_original": "¿Dónde puedo consultar el estado de mi solicitud?",
+      "texto_limpio": "¿Dónde puedo consultar el estado de mi solicitud?",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "soporte",
+      "subcategoria": "",
+      "regla_activada": "soporte",
+      "reglas_activadas": [
+        "soporte"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 38
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 38,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-012",
+      "hash_mencion": "91fa0e3a0f699e999caa7bd78141a03d7779c1c527bb2e597ffee1a3be6b4ee8",
+      "fuente": "demo",
+      "fecha": "2026-09-23T22:00:00Z",
+      "texto_original": "La factura ya aparece correctamente, gracias",
+      "texto_limpio": "La factura ya aparece correctamente, gracias",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "facturacion",
+      "subcategoria": "",
+      "regla_activada": "facturacion",
+      "reglas_activadas": [
+        "facturacion"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 6
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 6,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-013",
+      "hash_mencion": "b39ad81b69dae0fcc43fc6c988213ccf01750f1fc6a8bbce8f927044a39a7f63",
+      "fuente": "demo",
+      "fecha": "2026-09-24T05:00:00Z",
+      "texto_original": "La entrega volvió a retrasarse y nadie me avisa",
+      "texto_limpio": "La entrega volvió a retrasarse y nadie me avisa",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "logistica",
+      "subcategoria": "",
+      "regla_activada": "logistica",
+      "reglas_activadas": [
+        "logistica"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 80
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 80,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-014",
+      "hash_mencion": "93cf0b21454eb70dc644bef7d278b2a92cbe4a6d3c0efa32142aef138d297887",
+      "fuente": "demo",
+      "fecha": "2026-09-24T12:00:00Z",
+      "texto_original": "Muy buena atención, la agente fue amable",
+      "texto_limpio": "Muy buena atención, la agente fue amable",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 9
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 9,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-015",
+      "hash_mencion": "935c6b116bc63983586711e9985a021d0f7a12ed364bb001114005706dd5e4b4",
+      "fuente": "demo",
+      "fecha": "2026-09-24T19:00:00Z",
+      "texto_original": "El seguimiento no se actualiza desde ayer",
+      "texto_limpio": "El seguimiento no se actualiza desde ayer",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "entrega",
+      "subcategoria": "",
+      "regla_activada": "entrega",
+      "reglas_activadas": [
+        "entrega"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 48
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 48,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-016",
+      "hash_mencion": "637b80956a94d68291213e4bb02e600ad49d305dda16faffbfe5155da3547692",
+      "fuente": "demo",
+      "fecha": "2026-09-25T02:00:00Z",
+      "texto_original": "No solucionaron mi caso en el primer contacto",
+      "texto_limpio": "No solucionaron mi caso en el primer contacto",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "soporte",
+      "subcategoria": "",
+      "regla_activada": "soporte",
+      "reglas_activadas": [
+        "soporte"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 62
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 62,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-017",
+      "hash_mencion": "06f2fbc8e738e58af391f2bff789edb091bcc813d7a36f224263bdd9d6fce4fa",
+      "fuente": "demo",
+      "fecha": "2026-09-25T09:00:00Z",
+      "texto_original": "El producto cumplió con lo que esperaba",
+      "texto_limpio": "El producto cumplió con lo que esperaba",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "producto",
+      "subcategoria": "",
+      "regla_activada": "producto",
+      "reglas_activadas": [
+        "producto"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 14
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 14,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-018",
+      "hash_mencion": "ef4c33e7e7a3ec536c25bae4c9119fd0b71c5ce0b77883367d81f21c88c255c2",
+      "fuente": "demo",
+      "fecha": "2026-09-25T16:00:00Z",
+      "texto_original": "¿Cuánto tarda el reembolso después de devolverlo?",
+      "texto_limpio": "¿Cuánto tarda el reembolso después de devolverlo?",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "devolucion",
+      "subcategoria": "",
+      "regla_activada": "devolucion",
+      "reglas_activadas": [
+        "devolucion"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 40
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 40,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-019",
+      "hash_mencion": "48cd23d947d417dc6fcae9cba7f9a61c2522e6cf7d8bbc4a75d6ca0ae5fe1f2c",
+      "fuente": "demo",
+      "fecha": "2026-09-25T23:00:00Z",
+      "texto_original": "El importe de mi factura no coincide con lo que pagué",
+      "texto_limpio": "El importe de mi factura no coincide con lo que pagué",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "facturacion",
+      "subcategoria": "",
+      "regla_activada": "facturacion",
+      "reglas_activadas": [
+        "facturacion"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 72
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 72,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-020",
+      "hash_mencion": "c60a376ef8e1a7bda3f417ed9d62135e6e5dbbdc54b29160673f919462bae7d8",
+      "fuente": "demo",
+      "fecha": "2026-09-26T06:00:00Z",
+      "texto_original": "Me explicaron todo con mucha claridad",
+      "texto_limpio": "Me explicaron todo con mucha claridad",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 11
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 11,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-021",
+      "hash_mencion": "b16c65f7857ae8c90effaf860ea291beca8fc1e53f09d098cfdd4b67b9855968",
+      "fuente": "demo",
+      "fecha": "2026-09-26T13:00:00Z",
+      "texto_original": "Sigo esperando la entrega de mi pedido",
+      "texto_limpio": "Sigo esperando la entrega de mi pedido",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "logistica",
+      "subcategoria": "",
+      "regla_activada": "logistica",
+      "reglas_activadas": [
+        "logistica"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 76
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 76,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-022",
+      "hash_mencion": "24c70a0cc2575baa31b64122c62a24434b22379c411160b2d315c13789d4c808",
+      "fuente": "demo",
+      "fecha": "2026-09-26T20:00:00Z",
+      "texto_original": "Llegó antes de la fecha estimada",
+      "texto_limpio": "Llegó antes de la fecha estimada",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "entrega",
+      "subcategoria": "",
+      "regla_activada": "entrega",
+      "reglas_activadas": [
+        "entrega"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 5
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 5,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-023",
+      "hash_mencion": "39fe8ca920efb5abf7b2b3618e1b121be340aea14b229b653eeaa75fe57cc4c9",
+      "fuente": "demo",
+      "fecha": "2026-09-27T03:00:00Z",
+      "texto_original": "Necesito cambiar algunos datos de mi solicitud",
+      "texto_limpio": "Necesito cambiar algunos datos de mi solicitud",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "soporte",
+      "subcategoria": "",
+      "regla_activada": "soporte",
+      "reglas_activadas": [
+        "soporte"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 32
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 32,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-024",
+      "hash_mencion": "23e9c074a9bbb43e59d0e5c0bc67819edb8cfdc25d32ff54a138ad67c9cbb43c",
+      "fuente": "demo",
+      "fecha": "2026-09-27T10:00:00Z",
+      "texto_original": "El producto recibido no corresponde con mi pedido",
+      "texto_limpio": "El producto recibido no corresponde con mi pedido",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "producto",
+      "subcategoria": "",
+      "regla_activada": "producto",
+      "reglas_activadas": [
+        "producto"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 84
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 84,
+      "severidad": "critica",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-025",
+      "hash_mencion": "dc65223b30dd0ddd19ec52b8c48b69e6385bb8a3b0de8e28f8d49e647d2103ba",
+      "fuente": "demo",
+      "fecha": "2026-09-27T17:00:00Z",
+      "texto_original": "La respuesta tardó demasiado en llegar",
+      "texto_limpio": "La respuesta tardó demasiado en llegar",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 64
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 64,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-026",
+      "hash_mencion": "95d4e86aebcb9aa88d9ea16e50af1eb5cfce93c207f69cbdc8aba55d22c4e21c",
+      "fuente": "demo",
+      "fecha": "2026-09-28T00:00:00Z",
+      "texto_original": "El reembolso ya fue procesado correctamente",
+      "texto_limpio": "El reembolso ya fue procesado correctamente",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "devolucion",
+      "subcategoria": "",
+      "regla_activada": "devolucion",
+      "reglas_activadas": [
+        "devolucion"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 7
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 7,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-027",
+      "hash_mencion": "01b80548b2d3bf7cf77b430db490a4861880ba416c079ae93b0d7a8621d2a778",
+      "fuente": "demo",
+      "fecha": "2026-09-28T07:00:00Z",
+      "texto_original": "¿Pueden enviarme nuevamente mi comprobante?",
+      "texto_limpio": "¿Pueden enviarme nuevamente mi comprobante?",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "facturacion",
+      "subcategoria": "",
+      "regla_activada": "facturacion",
+      "reglas_activadas": [
+        "facturacion"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 36
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 36,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-028",
+      "hash_mencion": "4a7f333537898a579c3e0f0acb7921a7f10a7ff56e71549653a798e1fe337c6b",
+      "fuente": "demo",
+      "fecha": "2026-09-28T14:00:00Z",
+      "texto_original": "El repartidor indicó una visita que nunca ocurrió",
+      "texto_limpio": "El repartidor indicó una visita que nunca ocurrió",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "logistica",
+      "subcategoria": "",
+      "regla_activada": "logistica",
+      "reglas_activadas": [
+        "logistica"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 71
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 5
+        }
+      ],
+      "score_matematico": 71,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-029",
+      "hash_mencion": "8c2dd635b580f153c1e714321a855c9f48200bea56e5ab4d13ef56c5805a6402",
+      "fuente": "demo",
+      "fecha": "2026-09-28T21:00:00Z",
+      "texto_original": "Todo llegó completo y en perfecto estado",
+      "texto_limpio": "Todo llegó completo y en perfecto estado",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "producto",
+      "subcategoria": "",
+      "regla_activada": "producto",
+      "reglas_activadas": [
+        "producto"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 8
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 8,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-030",
+      "hash_mencion": "6da91af0422112e629eec37ddda3e879d8450a1175a1f510475744057ea698ba",
+      "fuente": "demo",
+      "fecha": "2026-09-29T04:00:00Z",
+      "texto_original": "Mi caso quedó resuelto, muchas gracias",
+      "texto_limpio": "Mi caso quedó resuelto, muchas gracias",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.72,
+      "confianza_sentimiento": 0.91,
+      "entidad_detectada": null,
+      "categoria": "soporte",
+      "subcategoria": "",
+      "regla_activada": "soporte",
+      "reglas_activadas": [
+        "soporte"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 13
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 13,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-031",
+      "hash_mencion": "f57078382b44ecf90b59e8d097fc3be2cbdd51e930fa1507929e05f451284587",
+      "fuente": "demo",
+      "fecha": "2026-09-29T11:00:00Z",
+      "texto_original": "La fecha prometida ya pasó y no tengo novedades",
+      "texto_limpio": "La fecha prometida ya pasó y no tengo novedades",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.76,
+      "confianza_sentimiento": 0.94,
+      "entidad_detectada": null,
+      "categoria": "entrega",
+      "subcategoria": "",
+      "regla_activada": "entrega",
+      "reglas_activadas": [
+        "entrega"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 79
+        },
+        {
+          "factor": "urgencia",
+          "value": 10
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 79,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    },
+    {
+      "id_mencion": "demo-mention-032",
+      "hash_mencion": "52e486fddd7aca840373258af765f2fbb6de8097104cba93f21470abd63869ff",
+      "fuente": "demo",
+      "fecha": "2026-09-29T18:00:00Z",
+      "texto_original": "Quiero hablar con una persona para revisar mi caso",
+      "texto_limpio": "Quiero hablar con una persona para revisar mi caso",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.05,
+      "confianza_sentimiento": 0.82,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 45
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 45,
+      "severidad": "media",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T12:00:00Z",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.2.0"
+    }
+  ],
+  "insights": [
+    {
+      "id_insight": "demo-insight-001",
+      "tipo": "Fricción logística",
+      "resumen": "Los retrasos y la falta de actualización del seguimiento concentran una parte relevante de las menciones negativas.",
+      "hallazgos": [
+        "Se repiten expresiones de espera prolongada.",
+        "La severidad aumenta cuando la fecha prometida ya pasó."
+      ],
+      "temas": [
+        "retraso de entrega",
+        "pedido no recibido"
+      ],
+      "nivel_confianza": "alta",
+      "limitaciones": [
+        "Dataset demostrativo; no representa una población real."
+      ]
+    },
+    {
+      "id_insight": "demo-insight-002",
+      "tipo": "Oportunidad de servicio",
+      "resumen": "Las conversaciones donde un agente responde con claridad tienden a terminar con sentimiento positivo.",
+      "hallazgos": [
+        "La resolución posterior mejora la trayectoria conversacional."
+      ],
+      "temas": [
+        "atención al cliente"
+      ],
+      "nivel_confianza": "media",
+      "limitaciones": [
+        "Muestra pequeña y artificial."
+      ]
+    },
+    {
+      "id_insight": "demo-insight-003",
+      "tipo": "Riesgo de facturación",
+      "resumen": "Los cobros duplicados o importes que no coinciden producen scores altos de severidad.",
+      "hallazgos": [
+        "Los problemas de facturación aparecen como incidentes de alta prioridad."
+      ],
+      "temas": [
+        "cobro duplicado"
+      ],
+      "nivel_confianza": "media",
+      "limitaciones": [
+        "No incluye datos financieros reales."
+      ]
+    },
+    {
+      "id_insight": "demo-insight-004",
+      "tipo": "Memoria conversacional",
+      "resumen": "Sentia puede identificar temas, intenciones, problemas y patrones lingüísticos frecuentes sin convertir la IA generativa en fuente de verdad.",
+      "hallazgos": [
+        "La memoria se basa en evidencia repetida.",
+        "Los estados permiten diferenciar propuestas y conocimiento validado."
+      ],
+      "temas": [
+        "retraso de entrega",
+        "atención al cliente"
+      ],
+      "nivel_confianza": "alta",
+      "limitaciones": [
+        "La memoria demostrativa no debe mezclarse con conocimiento real."
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "type": "topic",
+      "canonical_name": "retraso de entrega",
+      "aliases": [
+        "pedido demorado",
+        "entrega tarde",
+        "demora del pedido"
+      ],
+      "frequency": 9,
+      "confidence": 0.93,
+      "status": "learned"
+    },
+    {
+      "type": "problem",
+      "canonical_name": "pedido no recibido",
+      "aliases": [
+        "no llegó",
+        "no me entregan",
+        "paquete no recibido"
+      ],
+      "frequency": 6,
+      "confidence": 0.89,
+      "status": "validated"
+    },
+    {
+      "type": "intent",
+      "canonical_name": "consultar estado del pedido",
+      "aliases": [
+        "dónde está mi pedido",
+        "seguimiento",
+        "estado de entrega"
+      ],
+      "frequency": 7,
+      "confidence": 0.88,
+      "status": "validated"
+    },
+    {
+      "type": "problem",
+      "canonical_name": "cobro duplicado",
+      "aliases": [
+        "me cobraron dos veces",
+        "doble cobro"
+      ],
+      "frequency": 3,
+      "confidence": 0.79,
+      "status": "validated"
+    },
+    {
+      "type": "topic",
+      "canonical_name": "atención al cliente",
+      "aliases": [
+        "servicio",
+        "soporte",
+        "atención por chat"
+      ],
+      "frequency": 8,
+      "confidence": 0.91,
+      "status": "learned"
+    },
+    {
+      "type": "intent",
+      "canonical_name": "solicitar devolución",
+      "aliases": [
+        "devolver producto",
+        "hacer devolución"
+      ],
+      "frequency": 3,
+      "confidence": 0.77,
+      "status": "validated"
+    },
+    {
+      "type": "problem",
+      "canonical_name": "producto incorrecto",
+      "aliases": [
+        "recibí otro producto",
+        "no corresponde al pedido"
+      ],
+      "frequency": 2,
+      "confidence": 0.71,
+      "status": "proposed"
+    },
+    {
+      "type": "pattern",
+      "canonical_name": "fricción con resolución posterior",
+      "aliases": [
+        "empieza negativo y termina positivo",
+        "caso resuelto"
+      ],
+      "frequency": 4,
+      "confidence": 0.86,
+      "status": "validated"
+    }
+  ],
+  "statistics": {
+    "total": 32,
+    "sentiment_counts": {
+      "positivo": 11,
+      "negativo": 13,
+      "neutro": 8
+    },
+    "dataset": "demo"
+  },
+  "errors": [],
+  "conversations": [
+    {
+      "conversation_id": "demo-conv-001",
+      "fuente": "demo",
+      "turns": [
+        {
+          "turn_index": 0,
+          "mention_id": "demo-mention-001",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 1,
+          "mention_id": "demo-mention-002",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        },
+        {
+          "turn_index": 2,
+          "mention_id": "demo-mention-003",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 3,
+          "mention_id": "demo-mention-004",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        }
+      ],
+      "participants": [
+        {
+          "speaker": "agente",
+          "speaker_role": "agente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 1,
+            "negativo": 0,
+            "neutro": 1
+          }
+        },
+        {
+          "speaker": "cliente",
+          "speaker_role": "cliente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 0,
+            "negativo": 2,
+            "neutro": 0
+          }
+        }
+      ],
+      "turn_count": 4,
+      "sentiment_counts": {
+        "positivo": 1,
+        "negativo": 2,
+        "neutro": 1
+      },
+      "unattributed_turns": 0,
+      "analysis": {
+        "turn_count": 4,
+        "sentiment_counts": {
+          "positivo": 1,
+          "negativo": 2,
+          "neutro": 1
+        },
+        "sentiment_trajectory": [
+          "negativo",
+          "neutro",
+          "negativo",
+          "positivo"
+        ],
+        "sentiment_trend": "mejora",
+        "first_score": 78,
+        "last_score": 42,
+        "score_global": 44,
+        "severidad_global": "media",
+        "friction_score": 62,
+        "resolution_score": 18,
+        "friction_hits": 2,
+        "resolution_hits": 1,
+        "negative_turns": [
+          0,
+          2
+        ],
+        "unattributed_turns": 0,
+        "analysis_language": "es"
+      }
+    },
+    {
+      "conversation_id": "demo-conv-002",
+      "fuente": "demo",
+      "turns": [
+        {
+          "turn_index": 0,
+          "mention_id": "demo-mention-005",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 1,
+          "mention_id": "demo-mention-009",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        },
+        {
+          "turn_index": 2,
+          "mention_id": "demo-mention-012",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 3,
+          "mention_id": "demo-mention-017",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        }
+      ],
+      "participants": [
+        {
+          "speaker": "agente",
+          "speaker_role": "agente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 2,
+            "negativo": 0,
+            "neutro": 0
+          }
+        },
+        {
+          "speaker": "cliente",
+          "speaker_role": "cliente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 2,
+            "negativo": 0,
+            "neutro": 0
+          }
+        }
+      ],
+      "turn_count": 4,
+      "sentiment_counts": {
+        "positivo": 4,
+        "negativo": 0,
+        "neutro": 0
+      },
+      "unattributed_turns": 0,
+      "analysis": {
+        "turn_count": 4,
+        "sentiment_counts": {
+          "positivo": 4,
+          "negativo": 0,
+          "neutro": 0
+        },
+        "sentiment_trajectory": [
+          "positivo",
+          "positivo",
+          "positivo",
+          "positivo"
+        ],
+        "sentiment_trend": "estable",
+        "first_score": 10,
+        "last_score": 14,
+        "score_global": 6,
+        "severidad_global": "baja",
+        "friction_score": 8,
+        "resolution_score": 85,
+        "friction_hits": 1,
+        "resolution_hits": 2,
+        "negative_turns": [],
+        "unattributed_turns": 0,
+        "analysis_language": "es"
+      }
+    },
+    {
+      "conversation_id": "demo-conv-003",
+      "fuente": "demo",
+      "turns": [
+        {
+          "turn_index": 0,
+          "mention_id": "demo-mention-006",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 1,
+          "mention_id": "demo-mention-010",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        },
+        {
+          "turn_index": 2,
+          "mention_id": "demo-mention-016",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 3,
+          "mention_id": "demo-mention-024",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        },
+        {
+          "turn_index": 4,
+          "mention_id": "demo-mention-030",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        }
+      ],
+      "participants": [
+        {
+          "speaker": "agente",
+          "speaker_role": "agente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 0,
+            "negativo": 0,
+            "neutro": 2
+          }
+        },
+        {
+          "speaker": "cliente",
+          "speaker_role": "cliente",
+          "turns": 3,
+          "sentiments": {
+            "positivo": 1,
+            "negativo": 2,
+            "neutro": 0
+          }
+        }
+      ],
+      "turn_count": 5,
+      "sentiment_counts": {
+        "positivo": 1,
+        "negativo": 2,
+        "neutro": 2
+      },
+      "unattributed_turns": 0,
+      "analysis": {
+        "turn_count": 5,
+        "sentiment_counts": {
+          "positivo": 1,
+          "negativo": 2,
+          "neutro": 2
+        },
+        "sentiment_trajectory": [
+          "negativo",
+          "neutro",
+          "negativo",
+          "neutro",
+          "positivo"
+        ],
+        "sentiment_trend": "mejora",
+        "first_score": 88,
+        "last_score": 13,
+        "score_global": 52,
+        "severidad_global": "media",
+        "friction_score": 55,
+        "resolution_score": 35,
+        "friction_hits": 1,
+        "resolution_hits": 1,
+        "negative_turns": [
+          0,
+          2
+        ],
+        "unattributed_turns": 0,
+        "analysis_language": "es"
+      }
+    },
+    {
+      "conversation_id": "demo-conv-004",
+      "fuente": "demo",
+      "turns": [
+        {
+          "turn_index": 0,
+          "mention_id": "demo-mention-007",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 1,
+          "mention_id": "demo-mention-015",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        },
+        {
+          "turn_index": 2,
+          "mention_id": "demo-mention-023",
+          "speaker": "cliente",
+          "speaker_role": "cliente"
+        },
+        {
+          "turn_index": 3,
+          "mention_id": "demo-mention-031",
+          "speaker": "agente",
+          "speaker_role": "agente"
+        }
+      ],
+      "participants": [
+        {
+          "speaker": "agente",
+          "speaker_role": "agente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 1,
+            "negativo": 0,
+            "neutro": 1
+          }
+        },
+        {
+          "speaker": "cliente",
+          "speaker_role": "cliente",
+          "turns": 2,
+          "sentiments": {
+            "positivo": 0,
+            "negativo": 1,
+            "neutro": 1
+          }
+        }
+      ],
+      "turn_count": 4,
+      "sentiment_counts": {
+        "positivo": 1,
+        "negativo": 1,
+        "neutro": 2
+      },
+      "unattributed_turns": 0,
+      "analysis": {
+        "turn_count": 4,
+        "sentiment_counts": {
+          "positivo": 1,
+          "negativo": 1,
+          "neutro": 2
+        },
+        "sentiment_trajectory": [
+          "neutro",
+          "neutro",
+          "negativo",
+          "positivo"
+        ],
+        "sentiment_trend": "mejora",
+        "first_score": 35,
+        "last_score": 79,
+        "score_global": 38,
+        "severidad_global": "media",
+        "friction_score": 47,
+        "resolution_score": 48,
+        "friction_hits": 1,
+        "resolution_hits": 1,
+        "negative_turns": [
+          2
+        ],
+        "unattributed_turns": 0,
+        "analysis_language": "es"
+      }
+    }
+  ]
+}

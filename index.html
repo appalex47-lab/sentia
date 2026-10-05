@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https:; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="Sentia Intelligence from Conversations es una plataforma local-first para detectar, medir y explicar señales en conversaciones.">
+  <title>Sentia Intelligence from Conversations</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación principal">
+      <h1>Sentia</h1>
+      <nav aria-label="Secciones de Sentia">
+        <button type="button" data-view="dashboard" class="nav-item active" aria-current="page">Dashboard</button>
+        <button type="button" data-view="mentions" class="nav-item" aria-current="false">Menciones</button>
+        <button type="button" data-view="insights" class="nav-item" aria-current="false">Insights</button>
+        <button type="button" data-view="knowledge" class="nav-item" aria-current="false">Conocimiento</button>
+        <button type="button" data-view="configuration" class="nav-item" aria-current="false">Configuración</button>
+        <button type="button" data-view="integrations" class="nav-item" aria-current="false">Integraciones</button>
+        <button type="button" data-view="ingestion" class="nav-item" aria-current="false">Ingesta manual</button>
+        <button type="button" data-view="help" class="nav-item" aria-current="false">Ayuda</button>
+      </nav>
+      <div class="sidebar-note">Local-first · IndexedDB</div>
+    </aside>
+
+    <main id="main" class="main" tabindex="-1">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Sentia · Intelligence from Conversations</span>
+          <h2 id="page-title">Dashboard</h2>
+        </div>
+        <div class="filters" aria-label="Filtros globales">
+          <label>Desde <input id="date-from" type="date"></label>
+          <label>Hasta <input id="date-to" type="date"></label>
+          <label>Buscar <input id="global-search" type="search" placeholder="Texto, categoría..."></label>
+        <button id="reload-data" type="button">Recargar</button>
+          <button id="clear-data" type="button">Borrar datos locales</button>
+        </div>
+      </header>
+
+      <section id="view-dashboard" class="view">
+        <div id="empty-state" class="empty-state hidden"></div>
+        <div class="kpi-grid">
+          <article class="kpi"><span>Total</span><strong id="kpi-total">0</strong></article>
+          <article class="kpi"><span>Positivas</span><strong id="kpi-positive">0</strong></article>
+          <article class="kpi"><span>Negativas</span><strong id="kpi-negative">0</strong></article>
+          <article class="kpi"><span>Críticas</span><strong id="kpi-critical">0</strong></article>
+          <article class="kpi"><span>Score promedio</span><strong id="kpi-score">0</strong></article>
+          <article class="kpi"><span>Calidad promedio</span><strong id="kpi-quality">0</strong></article>
+          <article class="kpi"><span>Conversaciones</span><strong id="kpi-conversations">0</strong></article>
+          <article class="kpi"><span>Fricción promedio</span><strong id="kpi-friction">0</strong></article>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <span class="eyebrow">Determinístico</span>
+              <h3>Evolución del sentimiento</h3>
+            </div>
+            <span class="badge">MODELO + DATOS</span>
+          </div>
+          <div class="chart-wrap"><div id="sentiment-chart" class="native-chart" role="img" aria-label="Evolución temporal del sentimiento"></div><p id="chart-fallback" class="muted hidden">El gráfico no está disponible; los datos siguen disponibles en la tabla de menciones.</p></div>
+        </div>
+
+        <div class="two-col">
+          <article class="card">
+            <div class="card-header"><h3>Insight del día</h3><span class="badge ai">GENERADO POR IA</span></div>
+            <div id="insight-content" class="insight">Sin insight disponible.</div>
+          </article>
+          <article class="card">
+            <div class="card-header"><h3>Menciones críticas</h3><span class="badge">REGLAS / SCORE</span></div>
+            <div id="critical-feed"></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="view-mentions" class="view hidden">
+        <div class="card">
+          <div class="card-header"><h3>Menciones</h3><span id="mentions-count" class="muted">0</span></div>
+          <div class="table-actions"><span id="page-status" class="muted">0 de 0</span><button id="prev-page" type="button">Anterior</button><button id="next-page" type="button">Siguiente</button></div><div class="table-wrap">
+            <table>
+              <thead><tr><th>Fecha</th><th>Texto</th><th>Sentimiento</th><th>Categoría</th><th>Score</th><th>Severidad</th><th>Calidad</th></tr></thead>
+              <tbody id="mentions-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-insights" class="view hidden">
+        <div class="card">
+          <div class="card-header"><h3>Insights</h3><span class="badge ai">IA EXPLICATIVA</span></div>
+          <div id="insights-list"></div>
+        </div>
+      </section>
+
+      <section id="view-knowledge" class="view hidden">
+        <div class="card">
+          <div class="card-header"><div><span class="eyebrow">Memoria conversacional</span><h3>Conocimiento aprendido</h3></div><span class="badge">PROPUESTAS</span></div>
+          <p>Sentia aprende únicamente patrones propios de conversaciones: temas, entidades, intenciones y problemas. Nada de catálogo de productos ni conocimiento farmacéutico pertenece a este módulo.</p>
+          <div class="knowledge-search" role="search">
+            <label for="knowledge-query">Consultar memoria conversacional</label>
+            <div class="inline-actions">
+              <input id="knowledge-query" type="search" autocomplete="off" placeholder="Ej. todavía no me entregan">
+              <button id="knowledge-search-btn" type="button">Buscar</button>
+              <button id="knowledge-search-clear" type="button" class="outline">Limpiar</button>
+            </div>
+            <p id="knowledge-search-status" class="muted" aria-live="polite"></p>
+          </div>
+          <div id="knowledge-summary" class="muted">Cargando conocimiento…</div>
+          <div id="knowledge-list" class="table-wrap"></div>
+        </div>
+      </section>
+
+      <section id="view-configuration" class="view hidden">
+        <div class="card">
+          <div class="card-header"><div><span class="eyebrow">Configuración</span><h3>Centro de configuración</h3></div><span class="badge">LOCAL-FIRST</span></div>
+          <section class="connection-hub" aria-labelledby="connection-hub-title"><div><span class="eyebrow">CONEXIONES EXTERNAS</span><h3 id="connection-hub-title">Redes sociales, analítica e IA</h3><p>Administra desde un solo lugar Facebook/Meta, Instagram, X, TikTok, YouTube, LinkedIn, GA4, Cohere y conectores personalizados.</p></div><div class="connection-hub-actions"><button id="open-integrations-center" type="button">Abrir centro de conexiones</button><span id="connection-hub-summary" class="muted" aria-live="polite">Cargando conexiones…</span></div></section>
+          <p>Los parámetros no sensibles se guardan localmente. Las credenciales y secretos permanecen fuera del navegador y se gestionan mediante el backend HTTPS.</p>
+          <div class="settings-grid">
+            <article class="settings-card"><h4>Backend seguro</h4><p>GitHub Pages sirve la interfaz. Para Cohere y las conexiones externas necesitas un backend HTTPS desplegado. Su URL no es un secreto y se guarda localmente.</p><label>URL del backend HTTPS<input id="backend-base-url" value="" placeholder="https://tu-backend.example.com"></label><div class="inline-actions"><button id="backend-save" type="button">Guardar URL</button><button id="backend-test" type="button" class="outline">Probar conexión</button></div><p id="backend-status" class="muted" aria-live="polite">Backend no configurado.</p></article>
+            <article class="settings-card"><h4>Datos</h4><p>Persistencia, importación y ciclo de vida local.</p><label>Modo de importación<select id="import-mode"><option value="replace">Reemplazar</option><option value="append">Agregar</option></select></label><label>Importar JSON<input id="json-file" type="file" accept="application/json"></label><p id="import-status" class="muted" aria-live="polite"></p></article>
+            <article class="settings-card"><h4>Reglas y scoring</h4><p>Las reglas determinísticas deben versionarse en Python y explicarse mediante factores de score.</p><span class="badge">Fuente de verdad: pipeline</span></article>
+            <article class="settings-card"><h4>Seguridad</h4><p>Sentia no guarda secretos de proveedores en el navegador. OAuth, tokens y claves se administran en conectores Python.</p><span class="badge">SECRETOS FUERA DEL CLIENTE</span></article>
+            <article class="settings-card"><h4>Documentación</h4><p>Consulta la guía de integraciones, permisos, variables y arquitectura.</p><a class="button-link" href="docs/SENTIA_INTEGRATIONS_GUIDE.pdf" download>Descargar guía de integraciones (PDF)</a><a class="text-link" href="docs/INTEGRATIONS_GUIDE.md">Ver guía técnica</a></article>
+            <article class="settings-card"><h4>Diagnóstico</h4><p id="integration-summary">Cargando estado de integraciones…</p><button id="refresh-integrations" type="button">Actualizar estados</button></article>
+            <article class="settings-card settings-card-demo"><h4>Datos de ejemplo</h4><p>Carga un conjunto robusto de conversaciones ficticias en español para explorar WhatsApp y llamadas, múltiples sentimientos, fricciones, pagos, logística, devoluciones, cuenta, fraude, soporte, escalaciones, insights, conversaciones y memoria aprendida. Los datos quedan marcados como demostrativos para poder eliminarlos sin afectar tus datos reales.</p><div class="inline-actions"><button id="demo-import" type="button">Importar datos de ejemplos</button><button id="demo-delete" type="button" class="outline">Borrar datos de ejemplo</button></div><p id="demo-status" class="muted" aria-live="polite">No se han cargado datos de ejemplo.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-ingestion" class="view hidden">
+        <div class="card">
+          <div class="card-header"><div><span class="eyebrow">Entrada universal</span><h3>Ingesta manual de conversaciones</h3></div><span class="badge">LOCAL-FIRST</span></div>
+          <p>Usa esta entrada para WhatsApp, llamadas y otras conversaciones. <strong>El idioma operativo de Sentia es español:</strong> WhatsApp y transcripciones de llamadas se analizan en español por defecto. También puedes importar otros idiomas y traducirlos con Cohere.</p>
+          <div class="settings-grid">
+            <article class="settings-card"><h4>1. Fuente</h4><label>Tipo<select id="manual-source-type"><option value="whatsapp">WhatsApp exportado</option><option value="call_transcript">Transcripción de llamada</option><option value="csv">CSV / hoja de cálculo</option><option value="json">JSON</option><option value="txt">Texto libre</option></select></label><label>Nombre de fuente<input id="manual-source-name" value="whatsapp" placeholder="whatsapp, call-center, CRM..."></label></article>
+            <article class="settings-card"><h4>2. Idioma</h4><label>Idioma para análisis<input id="manual-analysis-language" value="es" placeholder="es"></label><p class="muted">Por defecto: <strong>es</strong> (español).</p><label><input id="manual-translated" type="checkbox"> El archivo ya contiene texto traducido</label><label><input id="manual-auto-translate" type="checkbox"> Traducir automáticamente con Cohere</label><p class="muted">Si existe <code>texto_traducido</code>, Sentia analiza esa versión y conserva el original para trazabilidad.</p></article>
+          </div>
+          <article class="settings-card"><h4>3. Audio de llamada (opcional)</h4><input id="call-audio-file" type="file" accept=".flac,.mp3,.mpeg,.mpga,.ogg,.wav,audio/flac,audio/mpeg,audio/ogg,audio/wav"><p id="call-audio-status" class="muted" aria-live="polite">Para llamadas, puedes cargar directamente un audio en español de hasta 25 MB.</p><button id="call-audio-btn" type="button" disabled>Transcribir y analizar llamada</button></article>
+          <article class="settings-card"><h4>4. Archivo</h4><input id="manual-file" type="file" accept=".txt,.csv,.json,text/plain,text/csv,application/json"><p id="manual-import-status" class="muted" aria-live="polite">Selecciona un archivo para comenzar.</p><button id="manual-import-btn" type="button" disabled>Procesar e importar</button></article>
+          <article class="settings-card"><h4>Cómo manejar WhatsApp y llamadas</h4><ul><li><strong>WhatsApp:</strong> exporta el chat como TXT sin necesidad de cargarlo a un servicio externo.</li><li><strong>Llamadas:</strong> puedes cargar directamente MP3, WAV, FLAC, OGG o MPEG de hasta 25 MB; Cohere Transcribe recibe el idioma <code>es</code> y devuelve texto para el pipeline.</li><li><strong>Traducción:</strong> puedes entregar original + <code>texto_traducido</code>; Sentia analiza la traducción y conserva ambos.</li><li><strong>Privacidad:</strong> los archivos se procesan localmente mediante Python y no se suben a un proveedor por esta ingesta.</li></ul></article>
+        </div>
+      </section>
+
+      <section id="view-integrations" class="view hidden">
+        <div class="card">
+          <div class="card-header"><div><span class="eyebrow">Centro de Integraciones</span><h3>Conecta fuentes y servicios</h3></div><span class="badge">CREDENCIALES SEGURAS</span></div>
+          <p>Configura aquí identificadores, preferencias y permisos. Las claves, client secrets y tokens se gestionan exclusivamente mediante el conector Python correspondiente.</p>
+          <div class="sync-toolbar"><div><strong>Orquestación multi-fuente</strong><p id="sync-summary" class="muted">Sincronización manual disponible. La sincronización automática es opcional y se ejecuta mientras la app esté abierta, según la frecuencia seleccionada. La programación se guarda en IndexedDB.</p></div><div class="inline-actions"><button id="sync-all" type="button">Sincronizar todo</button><button id="sync-refresh" type="button" class="outline">Actualizar estado</button><button id="sync-diagnostic" type="button" class="outline">Exportar diagnóstico</button><button id="sync-reconcile" type="button" class="outline">Revisar consistencia</button><button id="sync-repair" type="button" class="outline">Reparar inconsistencias</button><button id="sync-maintenance" type="button" class="outline">Mantenimiento</button><label class="check-inline"><input id="sync-auto" type="checkbox"> Sincronización automática</label><label class="check-inline">Frecuencia<select id="sync-interval"><option value="15">15 min</option><option value="30">30 min</option><option value="60">60 min</option><option value="180">3 h</option><option value="360">6 h</option></select></label></div></div>
+          <div id="sync-health" class="sync-health" aria-live="polite"></div>
+          <p class="muted sync-freshness-note">La frescura es una señal operativa: <strong>fresh</strong> = dentro de la frecuencia, <strong>warning</strong> = superó una frecuencia, <strong>stale</strong> = superó dos, <strong>error</strong> = último intento fallido, <strong>never</strong> = aún no existe una sincronización exitosa.</p>
+          <div id="sync-history" class="sync-history"></div>
+          <div class="integration-filters" role="toolbar" aria-label="Filtrar conexiones"><button type="button" class="integration-filter active" data-integration-filter="all">Todas</button><button type="button" class="integration-filter" data-integration-filter="Social">Redes sociales</button><button type="button" class="integration-filter" data-integration-filter="Analytics">Analítica</button><button type="button" class="integration-filter" data-integration-filter="IA">IA</button><button type="button" class="integration-filter" data-integration-filter="REST / JSON">Personalizado</button></div><div id="integrations-grid" class="integration-grid"></div>
+        </div>
+      </section>
+
+      <section id="view-help" class="view hidden">
+        <div class="card">
+          <h3>Cómo interpretar la plataforma</h3>
+          <dl>
+            <dt>Sentimiento</dt><dd>Polaridad producida por el modelo de sentimiento.</dd>
+            <dt>Confianza</dt><dd>Confianza del modelo; no equivale al score de negocio.</dd>
+            <dt>Score</dt><dd>Resultado matemático determinístico de las reglas configuradas.</dd>
+            <dt>Severidad</dt><dd>Nivel derivado del score; no es sinónimo de sentimiento.</dd>
+            <dt>Calidad</dt><dd>Evaluación de la integridad y utilidad del dato de entrada.</dd>
+            <dt>IA</dt><dd>Cohere aporta interpretación generativa; no define los KPIs.</dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/db.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

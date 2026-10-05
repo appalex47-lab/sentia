@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "schema_version": "1.2.0",
+    "processing_version": "1.0.0",
+    "rules_version": "1.0.0",
+    "run_id": "RUN-20261004T040145",
+    "generated_at": "2026-10-04T04:01:45.351033+00:00"
+  },
+  "mentions": [
+    {
+      "id_mencion": "1",
+      "hash_mencion": "c38ff622c2aede05a0c96d024b1b5c624d22b78fd3c55619b0867779f573b479",
+      "fuente": "demo",
+      "fecha": "2026-10-01T10:00:00Z",
+      "texto_original": "Excelente servicio, gracias",
+      "texto_limpio": "Excelente servicio, gracias",
+      "sentimiento_pysentimiento": "positivo",
+      "score_sentimiento": 0.6666666666666666,
+      "confianza_sentimiento": 0.6666666666666666,
+      "entidad_detectada": null,
+      "categoria": "servicio",
+      "subcategoria": "",
+      "regla_activada": "servicio",
+      "reglas_activadas": [
+        "servicio",
+        "elogio"
+      ],
+      "prioridad_regla": 2,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 15
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 15,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T04:01:45.351033+00:00",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.0.0"
+    },
+    {
+      "id_mencion": "2",
+      "hash_mencion": "7d3674b22f280de351a8226f86676010ec9a4af73b2a0c02213ba29ffc1c9288",
+      "fuente": "demo",
+      "fecha": "2026-10-01T11:00:00Z",
+      "texto_original": "Mi paquete tiene retraso y no llega",
+      "texto_limpio": "Mi paquete tiene retraso y no llega",
+      "sentimiento_pysentimiento": "negativo",
+      "score_sentimiento": -0.3333333333333333,
+      "confianza_sentimiento": 0.3333333333333333,
+      "entidad_detectada": null,
+      "categoria": "logistica",
+      "subcategoria": "",
+      "regla_activada": "logistica",
+      "reglas_activadas": [
+        "logistica"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 65
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 10
+        }
+      ],
+      "score_matematico": 75,
+      "severidad": "alta",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T04:01:45.351033+00:00",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.0.0"
+    },
+    {
+      "id_mencion": "3",
+      "hash_mencion": "2a6a3ce23516f7ba3af8438e17631b1c8dd21082b898019bb399aab5c770cf96",
+      "fuente": "demo",
+      "fecha": "2026-10-02T09:00:00Z",
+      "texto_original": "Necesito información",
+      "texto_limpio": "Necesito información",
+      "sentimiento_pysentimiento": "neutro",
+      "score_sentimiento": 0.0,
+      "confianza_sentimiento": 0.34,
+      "entidad_detectada": null,
+      "categoria": "otro",
+      "subcategoria": "",
+      "regla_activada": "otro",
+      "reglas_activadas": [
+        "otro"
+      ],
+      "prioridad_regla": 1,
+      "factores_score": [
+        {
+          "factor": "sentimiento",
+          "value": 40
+        },
+        {
+          "factor": "urgencia",
+          "value": 0
+        },
+        {
+          "factor": "categoria",
+          "value": 0
+        }
+      ],
+      "score_matematico": 40,
+      "severidad": "baja",
+      "calidad_dato": "alta",
+      "es_duplicado": false,
+      "tiene_error": false,
+      "advertencias": [],
+      "procesado_en": "2026-10-04T04:01:45.351033+00:00",
+      "version_procesamiento": "1.0.0",
+      "version_reglas": "1.0.0",
+      "version_schema": "1.0.0"
+    }
+  ],
+  "insights": [],
+  "statistics": {
+    "total": 3,
+    "sentiment_counts": {
+      "positivo": 1,
+      "negativo": 1,
+      "neutro": 1
+    }
+  },
+  "errors": [
+    {
+      "code": "SENTIMENT_FALLBACK",
+      "message": "pysentimiento no disponible; se utilizó fallback heurístico"
+    }
+  ],
+  "conversations": [],
+  "knowledge": []
+}

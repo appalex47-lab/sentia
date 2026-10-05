@@ -1,0 +1,16 @@
+{
+  "release": "0.3.39",
+  "purpose": "Centro de Conexiones e Integraciones",
+  "file_count": 131,
+  "integration_providers": [
+    "meta",
+    "instagram",
+    "x",
+    "tiktok",
+    "youtube",
+    "linkedin",
+    "ga4",
+    "cohere",
+    "custom"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Sentia Intelligence from Conversations",
+  "short_name": "Sentia",
+  "lang": "es",
+  "start_url": "./",
+  "display": "standalone",
+  "description": "Inteligencia local-first para detectar, medir y explicar señales en conversaciones.",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0b1220"
+}

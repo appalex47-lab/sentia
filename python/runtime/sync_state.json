@@ -1,0 +1,23 @@
+{
+  "x": {
+    "status": "success",
+    "cursor": "new",
+    "checkpoint": {
+      "version": 1,
+      "status": "committed",
+      "committed_cursor": "new",
+      "pending_cursor": "",
+      "sequence": 5,
+      "run_id": "run-new",
+      "page": 5,
+      "updated_at": 1791161316.6868305
+    },
+    "last_sync_at": 1791161316.6868331,
+    "last_attempt_at": 1791161316.6868331,
+    "source_count": 1,
+    "duplicate_count": 0,
+    "error": "",
+    "version": 3,
+    "persistence_confirmed_at": 1791161316.6868358
+  }
+}

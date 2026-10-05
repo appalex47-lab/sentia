@@ -1,5 +1,0 @@
-pysentimiento>=0.7
-cohere>=5.0
-pytest>=8.0
-jsonschema>=4.20
-cryptography>=42.0
